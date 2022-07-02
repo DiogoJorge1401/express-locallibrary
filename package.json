@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start:dev": "export NODE_OPTIONS='--trace-deprecation --abort-on-uncaught-exception' && export NODE_ENV=development && nodemon --exec ts-node --transpile-only ./bin/www.ts",
-    "start": "node dist/bin/www.js",
+    "start": "cd dist && yarn install --production && node bin/www.js",
     "build": "sh etc/build.sh"
   },
   "engines": {
